@@ -8,8 +8,6 @@
  */
 function numrows( $dbLink, $query )
 {
-// test code
-echo $query;
 	// Why did they get rid of my mysql_num_rows!!??
 	// *cries*
 	$stmt = mysqli_prepare($dbLink, $query);
