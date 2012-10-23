@@ -31,11 +31,6 @@ $in_reasons = getPost("reasons");
 $in_ipAddress = getPost("ipAddress");
 $in_rules = getPost("rules");
 
-if (array_sum($in_rules) != 429) {
-	$reason = "Your answer to the final question of the application, regarding the rules and FAQ, was incorrect. Please read the documents carefully and try your application again.";
-	require_once("response_refused.php");
-}
-
 // Truncate any data that is too long
 $in_userIGN = substr($in_userIGN, 0, $maxDataAccepted);
 $in_email = substr($in_email, 0, $maxDataAccepted);
@@ -54,8 +49,13 @@ if( $dbLink === false ) {
 		require_once( "response_refused.php" );
 }
 
+else if (array_sum($in_rules) != 429) {
+	$reason = "Your answer to the final question of the application, regarding the rules and FAQ, was incorrect. Please read the documents carefully and try your application again.";
+	require_once("response_refused.php");
+}
+
 // Check that all fields were filled out
-if( $in_userIGN == "" || $in_email == "" || $in_age == ""
+else if( $in_userIGN == "" || $in_email == "" || $in_age == ""
 	|| $in_age == "" || $in_location == "" || $in_heardof == ""
 	|| $in_links == "" || $in_reasons == "" )
 {
