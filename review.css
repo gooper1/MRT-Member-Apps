@@ -1,0 +1,131 @@
+/**
+ Layout and style of divs
+ */
+
+#contents {
+	position: relative;
+	width: 6.75in;
+	height: 5in;
+	margin: 0 auto;
+	background-color: #e0e0e0;
+	text-align: left;
+}
+
+#panel_border {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #cfe2f3;
+	border: 2px solid #7db8b8;
+	border-radius: 0.5in;
+	-moz-border-radius: 0.5in;
+}
+
+#panel {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #000080;
+	border-radius: 0.5in;
+	-moz-border-radius: 0.5in;
+}
+
+#nav_left {
+	position: absolute;
+	top: 0.25in;
+	left: 0.25in;
+	height: 0.5in;
+	width: 0.6in;
+	background: url("images/left.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#nav_left:hover {
+	background: url("images/left_hl.png");
+}
+
+#nav_right {
+	position: absolute;
+	top: 0.25in;
+	right: 0.25in;
+	height: 0.5in;
+	width: 0.6in;
+	background: url("images/right.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#nav_right:hover {
+	background: url("images/right_hl.png");
+}
+
+#userinfo {
+	position: absolute;
+	top: 1in;
+	left: 0.25in;
+	width: 6.25in;
+	height: 3in;
+	max-height: 3in;
+	overflow: auto;
+}
+
+#action_accept, #action_reject, #action_ban {
+	position: absolute;
+	bottom: 0.25in;
+	width: 1in;
+	text-align: center;
+	font-size: 0.2in;
+	line-height: 1.2em;
+	border: 1px solid #004000;
+	border-radius: 0.1in;
+	-moz-border-radius: 0.1in;
+}
+
+#action_accept {
+	left: 0.25in;
+	background-color: #008000;
+}
+#action_accept:hover {
+	background-color: #00ff00;
+}
+
+#action_reject {
+	left: 2.825in;
+	background-color: #808000;
+}
+#action_reject:hover {
+	background-color: #ffff00;
+}
+
+#action_ban {
+	right: 0.25in;
+	background-color: #800000;
+}
+#action_ban:hover {
+	background-color: #ff0000;
+}
+
+
+/**
+ Main styles
+ */
+
+table {
+	border-bottom: 2px groove #e0e0e0;
+}
+
+table td {
+	padding: 0.0625in;
+}
+
+.right {
+	width: 4in;
+	text-align: left;
+}
+
+textarea {
+	width: 100%;
+}
+
+

@@ -1,0 +1,18 @@
+--- 1 ---
+
+Browsers allow running javascript code in the address bar by prefixing "javascript:" to the code.  This is an easy hack to do, but it rarely can do any real harm.  This method is pretty much obsolete since Chromium came along and allowed you to change the website's code and data by hand.  I suppose it could still be used for more complicated javascript injections, though.
+
+Test: Change IP
+	Passed.  Hacking attempt detected and logged.
+Test: Change number forms to string to try to crash application.
+
+All passed.
+
+
+--- 2 ---
+
+Perhaps inserting javascript code into the actual form data might work.
+
+Test: Code in form
+	11:28 - Partial failure (code won't run, but it is injected)
+	11:29 - Fixed; Passed

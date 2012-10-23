@@ -1,0 +1,30 @@
+PASSED:
+
+	SQL injection
+
+	Javascript injection to change IP
+	Insert javascript code into application so review runs code
+
+	TOR proxy
+		- Tested last week
+
+	DoS attack
+		- Decreases bandwidth used for DoS attacks
+
+FAILED:
+
+	Http proxy
+		- False positives
+
+	Submitting from another site and changing info
+		- We could fix this, but it's just like doing an ordinary submission, and changing IP is still detected. So...  probably not worth fixing.  It's okay.
+
+TO BE TESTED:
+
+	Caching proxy
+
+	Viewing files on server
+
+	Registering under another user's name and ruining rep
+
+

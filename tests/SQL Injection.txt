@@ -1,0 +1,13 @@
+SQL injection seems to be the most common hack that works.  The idea is to insert SQL code into a form or into other data that will be sent to an SQL query.
+
+Test: Single quote '
+	Passed
+Test: Double quote "
+	Passed
+Test: Whatever this is `
+	Passed
+Test: Comment --
+	Passed
+
+This wasn't tested streneously since I'm pretty sure I did it right the first time.
+

@@ -1,0 +1,162 @@
+/**
+ Layout styles
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+
+	color: #000000;
+}
+
+
+body {
+	width: 100%;
+	min-width: 7in;
+
+	background-color: #e0e0e0;
+
+	text-align: center;
+
+	font-family: "Times New Roman", Times, serif;
+	font-style: normal;
+	font-size: .15in;
+	line-height: 1.2em;
+	font-weight: normal;
+}
+
+
+#container {
+	width: 100%;
+}
+
+
+#header {
+	width: 100%;
+	height: 1in;
+}
+
+
+#headerContents {
+	position: relative;
+	width: 7in;
+	height: 100%;
+	margin: 0 auto;
+	text-align: left;
+	background: url("http://www.minecartrapidtransit.net/wp-uploads/cropped-spawn-station-sunset.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+
+#contents {
+	width: 6.75in;
+	margin: 0 auto;
+	padding: 0.125in;
+	background-color: #ffffff;
+	text-align: left;
+}
+
+
+#footer {
+	font-size: .8em;
+	line-height: 1.2em;
+}
+
+
+/**
+ Special styles for the footer
+ */
+
+html, body {
+	height: 100%;
+}
+
+
+body:before {
+	height: 100%;
+	width: 0;
+	float: left;
+	margin-top: -32767px;
+	content: "";
+}
+
+#container {
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+#contents {
+	/*overflow: auto;*/
+	padding-bottom: 0.40in;
+}
+
+#footer {
+	position: relative;
+	height: 0.15in;
+	bottom: 0;
+	margin: -0.15in 0 0 0;
+	clear: both;
+	background-color: #e0e0e0;
+	text-align: center;
+}
+
+
+/**
+ Main styles
+ */
+
+table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table tr {
+	border-top: 2px groove #e0e0e0;
+}
+
+table td {
+	padding: 0.125in 0.0625in 0.125in 0.0625in;
+	vertical-align: top;
+	text-align: center;
+}
+
+table .question {
+	text-align: right;
+}
+
+table .answer {
+	width: 4in;
+	text-align: left;
+}
+
+table .answer textarea {
+	display: block;
+	height: 1.25in;
+	width: 100%;
+	resize: none;
+}
+
+.error {
+	display: block;
+	margin: 0.125in 0 0 0;
+	border: 2px groove #e0e0e0;
+	color: #e00000;
+}
+
+.button {
+	margin: 0 0.03in 0 0.03in;
+	padding: 0.03in 0.125in 0.03in 0.125in;
+	color: #000000;
+	background-color: #0b5394;
+	cursor: pointer;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: #128fff;
+}
