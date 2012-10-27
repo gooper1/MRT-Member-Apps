@@ -3,7 +3,7 @@
 
 
 // So mysql will actually report errors to me.  o.O
-//mysqli_report(MYSQLI_REPORT_ERROR);
+mysqli_report(MYSQLI_REPORT_ERROR);
 
 
 // Included files
