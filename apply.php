@@ -64,7 +64,7 @@
 				<table>
 					<tr>
 						<td class="question">
-							Minecraft IGN:
+							Minecraft username:
 						</td>
 						<td class="answer">
 							<input type="text" name="username"></input>
@@ -88,7 +88,7 @@
 					</tr>
 					<tr>
 						<td class="question">
-							Location:
+							Location:<br /><small>This is collected for statistical and troubleshooting purposes only. Please enter your country of residence. If you live in the United States, please include the state.</small>
 						</td>
 						<td class="answer">
 							<input type="text" name="location"></input>
