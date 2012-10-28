@@ -3,7 +3,7 @@
 
 
 // So mysql will actually report errors to me.  o.O
-mysqli_report(MYSQLI_REPORT_ERROR);
+//mysqli_report(MYSQLI_REPORT_ERROR);
 
 
 // Included files
@@ -29,7 +29,7 @@ $in_heardof_other = getPost("heardof_other");
 $in_links = getPost("links");
 $in_reasons = getPost("reasons");
 $in_ipAddress = getPost("ipAddress");
-$in_rules = getPost("rules");
+
 
 // Truncate any data that is too long
 $in_userIGN = substr($in_userIGN, 0, $maxDataAccepted);
@@ -47,11 +47,6 @@ $dbLink = DB_connect();
 if( $dbLink === false ) {
 		$reason = "An error at our end has occurred.  Please retry your application later.";
 		require_once( "response_refused.php" );
-}
-
-else if (array_sum($in_rules) != 429) {
-	$reason = "Your answer to the final question of the application, regarding the rules and FAQ, was incorrect. Please read the documents carefully and try your application again.";
-	require_once("response_refused.php");
 }
 
 // Check that all fields were filled out
@@ -78,11 +73,11 @@ else if( isMember($in_userIGN) ) {
 	require_once( "response_refused.php" );
 }
 else if( isBanned($in_userIGN) ) {
-	$reason = "You cannot submit an application because you are banned from the server. Please email admin@minecartrapidtransit.net to appeal your ban.";
+	$reason = "You cannot submit an application because you are banned from the server.";
 	require_once( "response_refused.php" );
 }
 else if( isIPBanned($in_ipAddress) ) {
-	$reason = "Your IP address has been banned. Please email admin@minecartrapidtransit.net to appeal your ban.";
+	$reason = "Your IP address has been banned.";
 	require_once( "response_refused.php" );
 }
 else if( isAlreadySubmitted($dbLink, $in_userIGN) ) {
@@ -90,7 +85,7 @@ else if( isAlreadySubmitted($dbLink, $in_userIGN) ) {
 	require_once( "response_refused.php" );
 }
 else if( isAlreadySubmittedIp($dbLink, $in_ipAddress) >= $maxSubmissionsFromIP ) {
-	$reason = $maxSubmissionsFromIP ." applications have already been submitted from your IP address in the past 24 hours.  Please wait before submitting your application.";
+	$reason = "$maxSubmissionsFromIP applications have already been submitted from your IP address in the past 24 hours.  Please wait before submitting your application.";
 	require_once( "response_refused.php" );
 }
 else if( isPermGuest($in_userIGN) ) {
